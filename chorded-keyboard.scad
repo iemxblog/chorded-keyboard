@@ -4,7 +4,7 @@ thickness=20;
 cr=4;   // corner radius
 db1=10; // petit diamètre du bouton
 db2=12; // grand diamètre du bouton
-hb1=4;  // hauteur du petit diamètre du bouton
+hb1=3;  // hauteur du petit diamètre du bouton
 hb2=2;  // hauteur du grand diamètre du bouton
 dep=1;  // dépassement du bouton (par rapport à la surface de la boîte)
 nh=4;   // nombre de boutons sur la hauteur
@@ -98,9 +98,9 @@ module keyboard()
             }
         }
         wall_thickness1=hb1+hb2-dep+1+3.3;
-        wall_thickness2=5;
-        translate([wall_thickness1, wall_thickness2, wall_thickness1])
-            cube([width-2*wall_thickness1, thickness-2*wall_thickness2, height-2*wall_thickness1]);
+        wall_thickness2=3;
+        translate([wall_thickness1, wall_thickness2, wall_thickness2])
+            cube([width-wall_thickness1-wall_thickness2, thickness-2*wall_thickness2, height-wall_thickness1-wall_thickness2]);
         screws();
         pin_header();
     }
