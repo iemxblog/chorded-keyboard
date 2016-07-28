@@ -150,7 +150,7 @@ module buttons()
 
 bottom();
 translate([width*1.1, 0, 0]) top();
-translate([0, height*1.1, 0]) buttons();
+translate([0, height+db2/2+4, 0]) buttons();
 
 //bottom();
  //top();
